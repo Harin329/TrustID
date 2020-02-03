@@ -186,7 +186,6 @@
 				BE855C0523E641C200AED4D0 /* Frameworks */,
 				BE855C0623E641C200AED4D0 /* Resources */,
 				999FC2390C9AAF458B1094A3 /* [CP] Embed Pods Frameworks */,
-				85464112D1591CE19E42821B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -225,7 +224,6 @@
 				BE855C2623E641C300AED4D0 /* Frameworks */,
 				BE855C2723E641C300AED4D0 /* Resources */,
 				6FDDAC3970260DA871778A67 /* [CP] Embed Pods Frameworks */,
-				1CE057BDFF001E00584835B1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -309,23 +307,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1CE057BDFF001E00584835B1 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TrustID-TrustIDUITests/Pods-TrustID-TrustIDUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TrustID-TrustIDUITests/Pods-TrustID-TrustIDUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TrustID-TrustIDUITests/Pods-TrustID-TrustIDUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		4B09C64BA669A601FAB428CB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -363,23 +344,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TrustID-TrustIDUITests/Pods-TrustID-TrustIDUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		85464112D1591CE19E42821B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TrustID/Pods-TrustID-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TrustID/Pods-TrustID-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TrustID/Pods-TrustID-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		999FC2390C9AAF458B1094A3 /* [CP] Embed Pods Frameworks */ = {

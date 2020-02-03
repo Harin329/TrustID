@@ -6,11 +6,8 @@ target 'TrustID' do
   use_frameworks!
 
   # Pods for TrustID
-pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
 pod 'FirebaseUI/Storage'
-pod 'Firebase/MLVision'
-pod 'Firebase/MLVisionFaceModel'
 pod 'Firebase/Database'
 
 

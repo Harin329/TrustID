@@ -1,0 +1,6 @@
+framework module Pods_TrustIDTests {
+  umbrella header "Pods-TrustIDTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
