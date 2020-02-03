@@ -38,7 +38,7 @@ class ViewController: UIViewController {
                 if success {
                     // Move to the main thread because a state update triggers UI changes.
                     DispatchQueue.main.async { [unowned self] in
-                        db.collection("Users").whereField("FirstName", isEqualTo: "Harin").getDocuments{ (querySnapshot, err) in
+                        db.collection("Users").whereField("FirstName", isEqualTo: "Harin").whereField("LastName", isEqualTo: "Wu").getDocuments{ (querySnapshot, err) in
                             if let err = err {
                                 print("Error getting documents: \(err)")
                             } else {
