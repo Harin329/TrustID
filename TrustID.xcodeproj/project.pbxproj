@@ -1,0 +1,793 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		31BF30C7611DE19B03B40E03 /* Pods_TrustID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6CD560265C0D5C97BEAD95B /* Pods_TrustID.framework */; };
+		4083E4B4713C4A180E1E30B0 /* Pods_TrustIDTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC2301C8FA3503E08B8BE50 /* Pods_TrustIDTests.framework */; };
+		B90F76EECC886785515AFA0B /* Pods_TrustID_TrustIDUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F06DD128FF04FFE0D69331 /* Pods_TrustID_TrustIDUITests.framework */; };
+		BE6E2A7623E7C836004F871B /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6E2A7523E7C836004F871B /* UserInfo.swift */; };
+		BE855C0C23E641C200AED4D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE855C0B23E641C200AED4D0 /* AppDelegate.swift */; };
+		BE855C0E23E641C200AED4D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE855C0D23E641C200AED4D0 /* SceneDelegate.swift */; };
+		BE855C1023E641C200AED4D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE855C0F23E641C200AED4D0 /* ViewController.swift */; };
+		BE855C1323E641C200AED4D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE855C1123E641C200AED4D0 /* Main.storyboard */; };
+		BE855C1523E641C300AED4D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE855C1423E641C300AED4D0 /* Assets.xcassets */; };
+		BE855C1823E641C300AED4D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE855C1623E641C300AED4D0 /* LaunchScreen.storyboard */; };
+		BE855C2323E641C300AED4D0 /* TrustIDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE855C2223E641C300AED4D0 /* TrustIDTests.swift */; };
+		BE855C2E23E641C300AED4D0 /* TrustIDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE855C2D23E641C300AED4D0 /* TrustIDUITests.swift */; };
+		BEAE4F6D23E7D04400990479 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BEAE4F6C23E7D04400990479 /* GoogleService-Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BE855C1F23E641C300AED4D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE855C0023E641C200AED4D0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE855C0723E641C200AED4D0;
+			remoteInfo = TrustID;
+		};
+		BE855C2A23E641C300AED4D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE855C0023E641C200AED4D0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE855C0723E641C200AED4D0;
+			remoteInfo = TrustID;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3970959787816F9E6390D6FF /* Pods-TrustID-TrustIDUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrustID-TrustIDUITests.release.xcconfig"; path = "Target Support Files/Pods-TrustID-TrustIDUITests/Pods-TrustID-TrustIDUITests.release.xcconfig"; sourceTree = "<group>"; };
+		40C065F9ECD6EBBD97D3162B /* Pods-TrustID.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrustID.release.xcconfig"; path = "Target Support Files/Pods-TrustID/Pods-TrustID.release.xcconfig"; sourceTree = "<group>"; };
+		4921335D916939DD50DE2A86 /* Pods-TrustIDTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrustIDTests.release.xcconfig"; path = "Target Support Files/Pods-TrustIDTests/Pods-TrustIDTests.release.xcconfig"; sourceTree = "<group>"; };
+		7139FFA338B951AB75CC85EC /* Pods-TrustID.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrustID.debug.xcconfig"; path = "Target Support Files/Pods-TrustID/Pods-TrustID.debug.xcconfig"; sourceTree = "<group>"; };
+		82F06DD128FF04FFE0D69331 /* Pods_TrustID_TrustIDUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrustID_TrustIDUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96D86070198EE1681AC3CA30 /* Pods-TrustID-TrustIDUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrustID-TrustIDUITests.debug.xcconfig"; path = "Target Support Files/Pods-TrustID-TrustIDUITests/Pods-TrustID-TrustIDUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9EC2301C8FA3503E08B8BE50 /* Pods_TrustIDTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrustIDTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A35C3F72AC8E317AEE569822 /* Pods-TrustIDTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrustIDTests.debug.xcconfig"; path = "Target Support Files/Pods-TrustIDTests/Pods-TrustIDTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B6CD560265C0D5C97BEAD95B /* Pods_TrustID.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrustID.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE6E2A7523E7C836004F871B /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		BE855C0823E641C200AED4D0 /* TrustID.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrustID.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE855C0B23E641C200AED4D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BE855C0D23E641C200AED4D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BE855C0F23E641C200AED4D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BE855C1223E641C200AED4D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BE855C1423E641C300AED4D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BE855C1723E641C300AED4D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BE855C1923E641C300AED4D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE855C1E23E641C300AED4D0 /* TrustIDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrustIDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE855C2223E641C300AED4D0 /* TrustIDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrustIDTests.swift; sourceTree = "<group>"; };
+		BE855C2423E641C300AED4D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE855C2923E641C300AED4D0 /* TrustIDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrustIDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE855C2D23E641C300AED4D0 /* TrustIDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrustIDUITests.swift; sourceTree = "<group>"; };
+		BE855C2F23E641C300AED4D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEAE4F6C23E7D04400990479 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BE855C0523E641C200AED4D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31BF30C7611DE19B03B40E03 /* Pods_TrustID.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE855C1B23E641C300AED4D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4083E4B4713C4A180E1E30B0 /* Pods_TrustIDTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE855C2623E641C300AED4D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B90F76EECC886785515AFA0B /* Pods_TrustID_TrustIDUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C10E3CD01696C3447F2B484 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B6CD560265C0D5C97BEAD95B /* Pods_TrustID.framework */,
+				82F06DD128FF04FFE0D69331 /* Pods_TrustID_TrustIDUITests.framework */,
+				9EC2301C8FA3503E08B8BE50 /* Pods_TrustIDTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		30295D070812F03ABD7587AA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7139FFA338B951AB75CC85EC /* Pods-TrustID.debug.xcconfig */,
+				40C065F9ECD6EBBD97D3162B /* Pods-TrustID.release.xcconfig */,
+				96D86070198EE1681AC3CA30 /* Pods-TrustID-TrustIDUITests.debug.xcconfig */,
+				3970959787816F9E6390D6FF /* Pods-TrustID-TrustIDUITests.release.xcconfig */,
+				A35C3F72AC8E317AEE569822 /* Pods-TrustIDTests.debug.xcconfig */,
+				4921335D916939DD50DE2A86 /* Pods-TrustIDTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BE855BFF23E641C200AED4D0 = {
+			isa = PBXGroup;
+			children = (
+				BE855C0A23E641C200AED4D0 /* TrustID */,
+				BE855C2123E641C300AED4D0 /* TrustIDTests */,
+				BE855C2C23E641C300AED4D0 /* TrustIDUITests */,
+				BE855C0923E641C200AED4D0 /* Products */,
+				30295D070812F03ABD7587AA /* Pods */,
+				1C10E3CD01696C3447F2B484 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BE855C0923E641C200AED4D0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BE855C0823E641C200AED4D0 /* TrustID.app */,
+				BE855C1E23E641C300AED4D0 /* TrustIDTests.xctest */,
+				BE855C2923E641C300AED4D0 /* TrustIDUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BE855C0A23E641C200AED4D0 /* TrustID */ = {
+			isa = PBXGroup;
+			children = (
+				BE855C0B23E641C200AED4D0 /* AppDelegate.swift */,
+				BEAE4F6C23E7D04400990479 /* GoogleService-Info.plist */,
+				BE855C0D23E641C200AED4D0 /* SceneDelegate.swift */,
+				BE855C0F23E641C200AED4D0 /* ViewController.swift */,
+				BE6E2A7523E7C836004F871B /* UserInfo.swift */,
+				BE855C1123E641C200AED4D0 /* Main.storyboard */,
+				BE855C1423E641C300AED4D0 /* Assets.xcassets */,
+				BE855C1623E641C300AED4D0 /* LaunchScreen.storyboard */,
+				BE855C1923E641C300AED4D0 /* Info.plist */,
+			);
+			path = TrustID;
+			sourceTree = "<group>";
+		};
+		BE855C2123E641C300AED4D0 /* TrustIDTests */ = {
+			isa = PBXGroup;
+			children = (
+				BE855C2223E641C300AED4D0 /* TrustIDTests.swift */,
+				BE855C2423E641C300AED4D0 /* Info.plist */,
+			);
+			path = TrustIDTests;
+			sourceTree = "<group>";
+		};
+		BE855C2C23E641C300AED4D0 /* TrustIDUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BE855C2D23E641C300AED4D0 /* TrustIDUITests.swift */,
+				BE855C2F23E641C300AED4D0 /* Info.plist */,
+			);
+			path = TrustIDUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BE855C0723E641C200AED4D0 /* TrustID */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE855C3223E641C300AED4D0 /* Build configuration list for PBXNativeTarget "TrustID" */;
+			buildPhases = (
+				4B09C64BA669A601FAB428CB /* [CP] Check Pods Manifest.lock */,
+				BE855C0423E641C200AED4D0 /* Sources */,
+				BE855C0523E641C200AED4D0 /* Frameworks */,
+				BE855C0623E641C200AED4D0 /* Resources */,
+				999FC2390C9AAF458B1094A3 /* [CP] Embed Pods Frameworks */,
+				85464112D1591CE19E42821B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TrustID;
+			productName = TrustID;
+			productReference = BE855C0823E641C200AED4D0 /* TrustID.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BE855C1D23E641C300AED4D0 /* TrustIDTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE855C3523E641C300AED4D0 /* Build configuration list for PBXNativeTarget "TrustIDTests" */;
+			buildPhases = (
+				BB66032DD2EE81BCBE7C135E /* [CP] Check Pods Manifest.lock */,
+				BE855C1A23E641C300AED4D0 /* Sources */,
+				BE855C1B23E641C300AED4D0 /* Frameworks */,
+				BE855C1C23E641C300AED4D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE855C2023E641C300AED4D0 /* PBXTargetDependency */,
+			);
+			name = TrustIDTests;
+			productName = TrustIDTests;
+			productReference = BE855C1E23E641C300AED4D0 /* TrustIDTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BE855C2823E641C300AED4D0 /* TrustIDUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE855C3823E641C300AED4D0 /* Build configuration list for PBXNativeTarget "TrustIDUITests" */;
+			buildPhases = (
+				A61FD9168FBD731E3BC5DDED /* [CP] Check Pods Manifest.lock */,
+				BE855C2523E641C300AED4D0 /* Sources */,
+				BE855C2623E641C300AED4D0 /* Frameworks */,
+				BE855C2723E641C300AED4D0 /* Resources */,
+				6FDDAC3970260DA871778A67 /* [CP] Embed Pods Frameworks */,
+				1CE057BDFF001E00584835B1 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE855C2B23E641C300AED4D0 /* PBXTargetDependency */,
+			);
+			name = TrustIDUITests;
+			productName = TrustIDUITests;
+			productReference = BE855C2923E641C300AED4D0 /* TrustIDUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BE855C0023E641C200AED4D0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = TELUS;
+				TargetAttributes = {
+					BE855C0723E641C200AED4D0 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					BE855C1D23E641C300AED4D0 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = BE855C0723E641C200AED4D0;
+					};
+					BE855C2823E641C300AED4D0 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = BE855C0723E641C200AED4D0;
+					};
+				};
+			};
+			buildConfigurationList = BE855C0323E641C200AED4D0 /* Build configuration list for PBXProject "TrustID" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BE855BFF23E641C200AED4D0;
+			productRefGroup = BE855C0923E641C200AED4D0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BE855C0723E641C200AED4D0 /* TrustID */,
+				BE855C1D23E641C300AED4D0 /* TrustIDTests */,
+				BE855C2823E641C300AED4D0 /* TrustIDUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BE855C0623E641C200AED4D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE855C1823E641C300AED4D0 /* LaunchScreen.storyboard in Resources */,
+				BEAE4F6D23E7D04400990479 /* GoogleService-Info.plist in Resources */,
+				BE855C1523E641C300AED4D0 /* Assets.xcassets in Resources */,
+				BE855C1323E641C200AED4D0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE855C1C23E641C300AED4D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE855C2723E641C300AED4D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1CE057BDFF001E00584835B1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TrustID-TrustIDUITests/Pods-TrustID-TrustIDUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TrustID-TrustIDUITests/Pods-TrustID-TrustIDUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TrustID-TrustIDUITests/Pods-TrustID-TrustIDUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B09C64BA669A601FAB428CB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TrustID-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6FDDAC3970260DA871778A67 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TrustID-TrustIDUITests/Pods-TrustID-TrustIDUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TrustID-TrustIDUITests/Pods-TrustID-TrustIDUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TrustID-TrustIDUITests/Pods-TrustID-TrustIDUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85464112D1591CE19E42821B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TrustID/Pods-TrustID-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TrustID/Pods-TrustID-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TrustID/Pods-TrustID-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		999FC2390C9AAF458B1094A3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TrustID/Pods-TrustID-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TrustID/Pods-TrustID-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TrustID/Pods-TrustID-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A61FD9168FBD731E3BC5DDED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TrustID-TrustIDUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB66032DD2EE81BCBE7C135E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TrustIDTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BE855C0423E641C200AED4D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE6E2A7623E7C836004F871B /* UserInfo.swift in Sources */,
+				BE855C1023E641C200AED4D0 /* ViewController.swift in Sources */,
+				BE855C0C23E641C200AED4D0 /* AppDelegate.swift in Sources */,
+				BE855C0E23E641C200AED4D0 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE855C1A23E641C300AED4D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE855C2323E641C300AED4D0 /* TrustIDTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE855C2523E641C300AED4D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE855C2E23E641C300AED4D0 /* TrustIDUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BE855C2023E641C300AED4D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE855C0723E641C200AED4D0 /* TrustID */;
+			targetProxy = BE855C1F23E641C300AED4D0 /* PBXContainerItemProxy */;
+		};
+		BE855C2B23E641C300AED4D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE855C0723E641C200AED4D0 /* TrustID */;
+			targetProxy = BE855C2A23E641C300AED4D0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BE855C1123E641C200AED4D0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE855C1223E641C200AED4D0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BE855C1623E641C300AED4D0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE855C1723E641C300AED4D0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BE855C3023E641C300AED4D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BE855C3123E641C300AED4D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BE855C3323E641C300AED4D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7139FFA338B951AB75CC85EC /* Pods-TrustID.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 35ZK849627;
+				INFOPLIST_FILE = TrustID/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.telus.TrustID;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BE855C3423E641C300AED4D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40C065F9ECD6EBBD97D3162B /* Pods-TrustID.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 35ZK849627;
+				INFOPLIST_FILE = TrustID/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.telus.TrustID;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BE855C3623E641C300AED4D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A35C3F72AC8E317AEE569822 /* Pods-TrustIDTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 35ZK849627;
+				INFOPLIST_FILE = TrustIDTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.telus.TrustIDTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrustID.app/TrustID";
+			};
+			name = Debug;
+		};
+		BE855C3723E641C300AED4D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4921335D916939DD50DE2A86 /* Pods-TrustIDTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 35ZK849627;
+				INFOPLIST_FILE = TrustIDTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.telus.TrustIDTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrustID.app/TrustID";
+			};
+			name = Release;
+		};
+		BE855C3923E641C300AED4D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96D86070198EE1681AC3CA30 /* Pods-TrustID-TrustIDUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 35ZK849627;
+				INFOPLIST_FILE = TrustIDUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.telus.TrustIDUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TrustID;
+			};
+			name = Debug;
+		};
+		BE855C3A23E641C300AED4D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3970959787816F9E6390D6FF /* Pods-TrustID-TrustIDUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 35ZK849627;
+				INFOPLIST_FILE = TrustIDUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.telus.TrustIDUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TrustID;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BE855C0323E641C200AED4D0 /* Build configuration list for PBXProject "TrustID" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE855C3023E641C300AED4D0 /* Debug */,
+				BE855C3123E641C300AED4D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE855C3223E641C300AED4D0 /* Build configuration list for PBXNativeTarget "TrustID" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE855C3323E641C300AED4D0 /* Debug */,
+				BE855C3423E641C300AED4D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE855C3523E641C300AED4D0 /* Build configuration list for PBXNativeTarget "TrustIDTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE855C3623E641C300AED4D0 /* Debug */,
+				BE855C3723E641C300AED4D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE855C3823E641C300AED4D0 /* Build configuration list for PBXNativeTarget "TrustIDUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE855C3923E641C300AED4D0 /* Debug */,
+				BE855C3A23E641C300AED4D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BE855C0023E641C200AED4D0 /* Project object */;
+}
