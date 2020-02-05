@@ -55,6 +55,16 @@
 	</array>
 	<key>NSFaceIDUsageDescription</key>
 	<string>FaceID for Identifying User</string>
+	<key>NFCReaderUsageDescription</key>
+	<string>For Reading Tags</string>
+	<key>com.apple.developer.nfc.readersession.felica.systemcodes</key>
+	<array>
+		<string>12FC</string>
+	</array>
+	<key>com.apple.developer.nfc.readersession.iso7816.select-identifiers</key>
+	<array>
+		<string>D2760000850101</string>
+	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

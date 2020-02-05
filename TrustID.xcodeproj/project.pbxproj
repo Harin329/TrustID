@@ -19,7 +19,8 @@
 		BE855C1823E641C300AED4D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE855C1623E641C300AED4D0 /* LaunchScreen.storyboard */; };
 		BE855C2323E641C300AED4D0 /* TrustIDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE855C2223E641C300AED4D0 /* TrustIDTests.swift */; };
 		BE855C2E23E641C300AED4D0 /* TrustIDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE855C2D23E641C300AED4D0 /* TrustIDUITests.swift */; };
-		BEAE4F6D23E7D04400990479 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BEAE4F6C23E7D04400990479 /* GoogleService-Info.plist */; };
+		BEF9035423EA5EF8000E9E23 /* IDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF9035323EA5EF8000E9E23 /* IDViewController.swift */; };
+		BEF9035723EA6145000E9E23 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BEF9035623EA6145000E9E23 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +65,9 @@
 		BE855C2923E641C300AED4D0 /* TrustIDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrustIDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE855C2D23E641C300AED4D0 /* TrustIDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrustIDUITests.swift; sourceTree = "<group>"; };
 		BE855C2F23E641C300AED4D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BEAE4F6C23E7D04400990479 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BEF9035323EA5EF8000E9E23 /* IDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDViewController.swift; sourceTree = "<group>"; };
+		BEF9035523EA5FE1000E9E23 /* TrustID.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TrustID.entitlements; sourceTree = "<group>"; };
+		BEF9035623EA6145000E9E23 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,10 +146,12 @@
 		BE855C0A23E641C200AED4D0 /* TrustID */ = {
 			isa = PBXGroup;
 			children = (
+				BEF9035523EA5FE1000E9E23 /* TrustID.entitlements */,
 				BE855C0B23E641C200AED4D0 /* AppDelegate.swift */,
-				BEAE4F6C23E7D04400990479 /* GoogleService-Info.plist */,
 				BE855C0D23E641C200AED4D0 /* SceneDelegate.swift */,
 				BE855C0F23E641C200AED4D0 /* ViewController.swift */,
+				BEF9035323EA5EF8000E9E23 /* IDViewController.swift */,
+				BEF9035623EA6145000E9E23 /* GoogleService-Info.plist */,
 				BE6E2A7523E7C836004F871B /* UserInfo.swift */,
 				BE855C1123E641C200AED4D0 /* Main.storyboard */,
 				BE855C1423E641C300AED4D0 /* Assets.xcassets */,
@@ -284,7 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE855C1823E641C300AED4D0 /* LaunchScreen.storyboard in Resources */,
-				BEAE4F6D23E7D04400990479 /* GoogleService-Info.plist in Resources */,
+				BEF9035723EA6145000E9E23 /* GoogleService-Info.plist in Resources */,
 				BE855C1523E641C300AED4D0 /* Assets.xcassets in Resources */,
 				BE855C1323E641C200AED4D0 /* Main.storyboard in Resources */,
 			);
@@ -416,6 +421,7 @@
 			files = (
 				BE6E2A7623E7C836004F871B /* UserInfo.swift in Sources */,
 				BE855C1023E641C200AED4D0 /* ViewController.swift in Sources */,
+				BEF9035423EA5EF8000E9E23 /* IDViewController.swift in Sources */,
 				BE855C0C23E641C200AED4D0 /* AppDelegate.swift in Sources */,
 				BE855C0E23E641C200AED4D0 /* SceneDelegate.swift in Sources */,
 			);
@@ -591,6 +597,7 @@
 			baseConfigurationReference = 7139FFA338B951AB75CC85EC /* Pods-TrustID.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TrustID/TrustID.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 35ZK849627;
 				INFOPLIST_FILE = TrustID/Info.plist;
@@ -610,6 +617,7 @@
 			baseConfigurationReference = 40C065F9ECD6EBBD97D3162B /* Pods-TrustID.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TrustID/TrustID.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 35ZK849627;
 				INFOPLIST_FILE = TrustID/Info.plist;
