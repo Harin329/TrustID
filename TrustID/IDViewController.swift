@@ -18,7 +18,7 @@ class IDViewController: UIViewController {
     
 
     @IBAction func Register(_ sender: Any) {
-        guard NFCReaderSession.readingAvailable else {
+        guard NFCTagReaderSession.readingAvailable else {
             print("Not Supported")
             return
         }
@@ -44,8 +44,10 @@ extension IDViewController: NFCTagReaderSessionDelegate {
     }
     
     func tagReaderSession(_ session: NFCTagReaderSession, didDetect tags: [NFCTag]) {
-        //RegisterButton.setTitle("\(tags[0])", for: .normal)
         print(tags)
+        if (!tags.isEmpty) {
+            session.invalidate()
+        }
     }
 
 }
