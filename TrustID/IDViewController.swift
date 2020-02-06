@@ -10,7 +10,6 @@ import UIKit
 import CoreNFC
 
 class IDViewController: UIViewController {
-    @IBOutlet weak var RegisterButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +30,12 @@ class IDViewController: UIViewController {
         session!.begin()
     }
     
+    @IBAction func SendBluetooth(_ sender: Any) {
+    }
+    
+    @IBAction func ReceiveBluetooth(_ sender: Any) {
+    }
+    
 
 }
 
@@ -47,6 +52,13 @@ extension IDViewController: NFCTagReaderSessionDelegate {
         print(tags)
         if (!tags.isEmpty) {
             session.invalidate()
+            DispatchQueue.main.async {
+                let alert = UIAlertController(title: "Tag Found", message: "\(tags[0])", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+                NSLog("A Tag Was Found")
+                }))
+                self.present(alert, animated: true, completion: nil)
+            }
         }
     }
 

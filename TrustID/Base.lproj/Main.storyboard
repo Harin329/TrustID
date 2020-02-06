@@ -189,27 +189,44 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCg-eb-fEM">
                                 <rect key="frame" x="80" y="124" width="254" height="30"/>
-                                <state key="normal" title="Register Card"/>
+                                <state key="normal" title="Find Compass Card"/>
                                 <connections>
                                     <action selector="Register:" destination="aNC-nG-THf" eventType="touchUpInside" id="Ge3-1V-YDa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUI-79-BGh">
+                                <rect key="frame" x="80" y="204" width="254" height="30"/>
+                                <state key="normal" title="Send Bluetooth"/>
+                                <connections>
+                                    <action selector="SendBluetooth:" destination="aNC-nG-THf" eventType="touchUpInside" id="lfM-5o-M8N"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfg-0G-k7H">
+                                <rect key="frame" x="80" y="274" width="254" height="30"/>
+                                <state key="normal" title="Receive Bluetooth"/>
+                                <connections>
+                                    <action selector="ReceiveBluetooth:" destination="aNC-nG-THf" eventType="touchUpInside" id="Ope-sl-AIy"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Z2J-0N-sjg" firstAttribute="trailing" secondItem="lCg-eb-fEM" secondAttribute="trailing" constant="80" id="18p-UJ-IeQ"/>
+                            <constraint firstItem="Z2J-0N-sjg" firstAttribute="trailing" secondItem="gfg-0G-k7H" secondAttribute="trailing" constant="80" id="6Nf-Ux-lJO"/>
                             <constraint firstItem="Z2J-0N-sjg" firstAttribute="trailing" secondItem="kaP-7z-nPe" secondAttribute="trailing" constant="130" id="AZ8-ZH-1Ep"/>
+                            <constraint firstItem="gfg-0G-k7H" firstAttribute="leading" secondItem="Z2J-0N-sjg" secondAttribute="leading" constant="80" id="C0W-np-HP1"/>
                             <constraint firstItem="lCg-eb-fEM" firstAttribute="top" secondItem="kaP-7z-nPe" secondAttribute="bottom" constant="50" id="Kio-od-yk8"/>
+                            <constraint firstItem="pUI-79-BGh" firstAttribute="top" secondItem="lCg-eb-fEM" secondAttribute="bottom" constant="50" id="MeK-Mq-LZE"/>
+                            <constraint firstItem="gfg-0G-k7H" firstAttribute="top" secondItem="pUI-79-BGh" secondAttribute="bottom" constant="40" id="Tej-Qr-JBU"/>
                             <constraint firstItem="kaP-7z-nPe" firstAttribute="top" secondItem="Z2J-0N-sjg" secondAttribute="top" id="Y1m-Ha-cBf"/>
                             <constraint firstItem="lCg-eb-fEM" firstAttribute="leading" secondItem="Z2J-0N-sjg" secondAttribute="leading" constant="80" id="haX-rs-vze"/>
+                            <constraint firstItem="pUI-79-BGh" firstAttribute="leading" secondItem="Z2J-0N-sjg" secondAttribute="leading" constant="80" id="liR-so-a0f"/>
                             <constraint firstItem="kaP-7z-nPe" firstAttribute="leading" secondItem="Z2J-0N-sjg" secondAttribute="leading" constant="130" id="nCY-CW-NQy"/>
+                            <constraint firstItem="Z2J-0N-sjg" firstAttribute="trailing" secondItem="pUI-79-BGh" secondAttribute="trailing" constant="80" id="wgw-H5-f3q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Z2J-0N-sjg"/>
                     </view>
                     <navigationItem key="navigationItem" id="LJ0-tC-a4c"/>
-                    <connections>
-                        <outlet property="RegisterButton" destination="lCg-eb-fEM" id="WhI-AD-fEQ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pKd-kw-mP7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
