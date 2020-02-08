@@ -21,6 +21,7 @@ class DoorViewController: UIViewController {
     var connectionIterationsComplete = 0
     let defaultIterations = 5     // change this value based on test usecase
     var data = Data()
+    let doorID = "door1"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -161,7 +162,7 @@ extension DoorViewController: CBCentralManagerDelegate {
         
         // Reject if the signal strength is too low to attempt data transfer.
         // Change the minimum RSSI value depending on your app’s use case.
-        guard RSSI.intValue >= -50
+        guard RSSI.intValue >= -30
             else {
                 os_log("Discovered perhiperal not in expected range, at %d", RSSI.intValue)
                 return
@@ -170,7 +171,7 @@ extension DoorViewController: CBCentralManagerDelegate {
         os_log("Discovered %s at %d", String(describing: peripheral.name), RSSI.intValue)
         
         // Device is in range - have we already seen it?
-        if discoveredPeripheral != peripheral {
+        //if discoveredPeripheral != peripheral {
             
             // Save a local copy of the peripheral, so CoreBluetooth doesn't get rid of it.
             discoveredPeripheral = peripheral
@@ -178,7 +179,7 @@ extension DoorViewController: CBCentralManagerDelegate {
             // And finally, connect to the peripheral.
             os_log("Connecting to perhiperal %@", peripheral)
             centralManager.connect(peripheral, options: nil)
-        }
+        //}
     }
 
     /*
@@ -312,17 +313,59 @@ extension DoorViewController: CBPeripheralDelegate {
             //}
             print(self.data)
             
-            if (String(decoding: self.data, as: UTF8.self) == "Harin") {
-                view.backgroundColor = UIColor.green
-                LockStatus.text = "Unlocked"
-                Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { (_) in
-                    self.view.backgroundColor = UIColor.red
-                    self.LockStatus.text = "Locked"
-                    self.retrievePeripheral()
+            do {
+                let jsonDict = try JSONSerialization.jsonObject(with: self.data) as? NSDictionary
+                let tid = jsonDict!["tid"] as! String
+                let token = jsonDict!["token"] as! String
+                
+                let newDict =
+                [
+                    "tid": tid,
+                    "token": token,
+                    "doorId": doorID
+                ]
+                let jsonData = try JSONSerialization.data(withJSONObject: newDict, options: .prettyPrinted)
+
+                //API Call
+                let url = URL(string: "https://thacks-api.herokuapp.com/employees")!
+                
+                if !self.data.isEmpty {
+                    var request = URLRequest(url: url)
+                    request.httpMethod = "POST"
+                    request.httpBody = jsonData
+
+                    URLSession.shared.getAllTasks { (openTasks: [URLSessionTask]) in
+                        NSLog("open tasks: \(openTasks)")
+                    }
+
+                    let task = URLSession.shared.dataTask(with: request, completionHandler: { (responseData: Data?, response: URLResponse?, error: Error?) in
+                        NSLog("\(responseData)")
+                        NSLog("\(response)")
+                    })
+                    task.resume()
                 }
+                
+            
+                
+                /*if (tid == "t947107") {
+                    view.backgroundColor = UIColor.green
+                    LockStatus.text = "Unlocked"
+                    Timer.scheduledTimer(withTimeInterval: 10, repeats: false) { (_) in
+                        self.view.backgroundColor = UIColor.red
+                        self.LockStatus.text = "Locked"
+                        self.retrievePeripheral()
+                    }
+                }*/
+                
+                // Write test data
+                writeData()
+            } catch {
+                print(error.localizedDescription)
             }
-            // Write test data
-            writeData()
+            
+            
+            
+            
         } else {
             // Otherwise, just append the data to what we have previously received.
             data.append(characteristicData)

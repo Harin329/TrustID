@@ -143,12 +143,12 @@ class IDViewController: UIViewController {
     
     @IBAction func SendBluetooth(_ sender: Any) {
         let context = LAContext()
-        context.localizedCancelTitle = "Enter Username/Password"
+        context.localizedCancelTitle = "Use FaceID/TouchID"
         
         var error: NSError?
         if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
             
-            let reason = "Log in to your account"
+            let reason = "Open Door"
             context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: reason ) { success, error in
 
                 if success {
@@ -244,17 +244,31 @@ extension IDViewController: CBPeripheralManagerDelegate {
     func peripheralManager(_ peripheral: CBPeripheralManager, central: CBCentral, didSubscribeTo characteristic: CBCharacteristic) {
         os_log("Central subscribed to characteristic")
         
-        // Get the data
-        dataToSend = String("Harin").data(using: .utf8)!
+        let tid = "t94710"
+        let token = "token1"
         
-        // Reset the index
-        sendDataIndex = 0
-        
-        // save central
-        connectedCentral = central
-        
-        // Start sending
-        sendData()
+        let dict =
+        [
+            "tid": tid,
+            "token": token
+        ]
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted)
+            
+            // Get the data
+            dataToSend = jsonData
+            
+            // Reset the index
+            sendDataIndex = 0
+            
+            // save central
+            connectedCentral = central
+            
+            // Start sending
+            sendData()
+        } catch {
+            print(error.localizedDescription)
+        }
     }
     
     /*
