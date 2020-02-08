@@ -156,6 +156,9 @@ class IDViewController: UIViewController {
                     DispatchQueue.main.async { [unowned self] in
                         if !self.peripheralManager.isAdvertising {
                             self.peripheralManager.startAdvertising([CBAdvertisementDataServiceUUIDsKey: [InfoSent.serviceUUID]])
+                            Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { (_) in
+                                self.peripheralManager.stopAdvertising()
+                            }
                         } else {
                             self.peripheralManager.stopAdvertising()
                         }
@@ -242,7 +245,7 @@ extension IDViewController: CBPeripheralManagerDelegate {
         os_log("Central subscribed to characteristic")
         
         // Get the data
-        dataToSend = String("Harin Opened The Door").data(using: .utf8)!
+        dataToSend = String("Harin").data(using: .utf8)!
         
         // Reset the index
         sendDataIndex = 0

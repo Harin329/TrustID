@@ -12,6 +12,7 @@ import CoreBluetooth
 import os
 
 class DoorViewController: UIViewController {
+    @IBOutlet weak var LockStatus: UILabel!
     
     var centralManager: CBCentralManager!
     var discoveredPeripheral: CBPeripheral?
@@ -311,16 +312,15 @@ extension DoorViewController: CBPeripheralDelegate {
             //}
             print(self.data)
             
-            let alertController = UIAlertController(
-                title: "Opened",
-                message: "",
-                preferredStyle: .alert
-            )
-            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            DispatchQueue.main.async {
-                self.present(alertController, animated: true, completion: nil)
+            if (String(decoding: self.data, as: UTF8.self) == "Harin") {
+                view.backgroundColor = UIColor.green
+                LockStatus.text = "Unlocked"
+                Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { (_) in
+                    self.view.backgroundColor = UIColor.red
+                    self.LockStatus.text = "Locked"
+                    self.retrievePeripheral()
+                }
             }
-            
             // Write test data
             writeData()
         } else {

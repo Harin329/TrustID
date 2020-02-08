@@ -199,7 +199,6 @@
                                 <state key="normal" title="Send Bluetooth"/>
                                 <connections>
                                     <action selector="SendBluetooth:" destination="aNC-nG-THf" eventType="touchUpInside" id="lfM-5o-M8N"/>
-                                    <segue destination="pF4-EI-zN9" kind="show" id="y3p-ha-jyg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfg-0G-k7H">
@@ -258,6 +257,9 @@
                         <viewLayoutGuide key="safeArea" id="0J2-Te-Y9M"/>
                     </view>
                     <navigationItem key="navigationItem" id="etp-qD-LjM"/>
+                    <connections>
+                        <outlet property="LockStatus" destination="Wfp-te-gj3" id="ubQ-Nz-dlt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D4Y-Tf-OdQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
