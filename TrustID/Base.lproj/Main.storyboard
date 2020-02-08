@@ -199,13 +199,14 @@
                                 <state key="normal" title="Send Bluetooth"/>
                                 <connections>
                                     <action selector="SendBluetooth:" destination="aNC-nG-THf" eventType="touchUpInside" id="lfM-5o-M8N"/>
+                                    <segue destination="pF4-EI-zN9" kind="show" id="y3p-ha-jyg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfg-0G-k7H">
                                 <rect key="frame" x="80" y="274" width="254" height="30"/>
                                 <state key="normal" title="Receive Bluetooth"/>
                                 <connections>
-                                    <action selector="ReceiveBluetooth:" destination="aNC-nG-THf" eventType="touchUpInside" id="Ope-sl-AIy"/>
+                                    <segue destination="3YB-wA-bDY" kind="show" id="zBx-9e-0XL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -231,6 +232,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pKd-kw-mP7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1011.5942028985507" y="137.94642857142856"/>
+        </scene>
+        <!--Door View Controller-->
+        <scene sceneID="fTk-XF-k7x">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="3YB-wA-bDY" customClass="DoorViewController" customModule="TrustID" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ssc-Vz-dhY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Locked" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wfp-te-gj3">
+                                <rect key="frame" x="100" y="344" width="214" height="218"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0J2-Te-Y9M" firstAttribute="bottom" secondItem="Wfp-te-gj3" secondAttribute="bottom" constant="300" id="2xB-sy-frF"/>
+                            <constraint firstItem="Wfp-te-gj3" firstAttribute="top" secondItem="0J2-Te-Y9M" secondAttribute="top" constant="300" id="52y-1G-Yhf"/>
+                            <constraint firstItem="Wfp-te-gj3" firstAttribute="leading" secondItem="0J2-Te-Y9M" secondAttribute="leading" constant="100" id="awH-os-gQd"/>
+                            <constraint firstItem="0J2-Te-Y9M" firstAttribute="trailing" secondItem="Wfp-te-gj3" secondAttribute="trailing" constant="100" id="rXb-de-f30"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0J2-Te-Y9M"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="etp-qD-LjM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D4Y-Tf-OdQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1996" y="401"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Lvi-v2-vP6">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="pF4-EI-zN9" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ePU-dM-bIZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="QVi-9B-yTz"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="FS1-Xc-woA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4RE-Sw-nQC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1996" y="-317"/>
         </scene>
     </scenes>
 </document>

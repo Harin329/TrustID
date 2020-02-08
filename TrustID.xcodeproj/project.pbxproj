@@ -20,6 +20,7 @@
 		BE855C2323E641C300AED4D0 /* TrustIDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE855C2223E641C300AED4D0 /* TrustIDTests.swift */; };
 		BE855C2E23E641C300AED4D0 /* TrustIDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE855C2D23E641C300AED4D0 /* TrustIDUITests.swift */; };
 		BEB656E823EE39FE00E8DE36 /* InfoSent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB656E723EE39FE00E8DE36 /* InfoSent.swift */; };
+		BEB656EA23EF58E200E8DE36 /* DoorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB656E923EF58E200E8DE36 /* DoorViewController.swift */; };
 		BEF9035423EA5EF8000E9E23 /* IDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF9035323EA5EF8000E9E23 /* IDViewController.swift */; };
 		BEF9035723EA6145000E9E23 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BEF9035623EA6145000E9E23 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
@@ -67,6 +68,7 @@
 		BE855C2D23E641C300AED4D0 /* TrustIDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrustIDUITests.swift; sourceTree = "<group>"; };
 		BE855C2F23E641C300AED4D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEB656E723EE39FE00E8DE36 /* InfoSent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoSent.swift; sourceTree = "<group>"; };
+		BEB656E923EF58E200E8DE36 /* DoorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorViewController.swift; sourceTree = "<group>"; };
 		BEF9035323EA5EF8000E9E23 /* IDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDViewController.swift; sourceTree = "<group>"; };
 		BEF9035523EA5FE1000E9E23 /* TrustID.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TrustID.entitlements; sourceTree = "<group>"; };
 		BEF9035623EA6145000E9E23 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -157,6 +159,7 @@
 				BEF9035623EA6145000E9E23 /* GoogleService-Info.plist */,
 				BE6E2A7523E7C836004F871B /* UserInfo.swift */,
 				BE855C1123E641C200AED4D0 /* Main.storyboard */,
+				BEB656E923EF58E200E8DE36 /* DoorViewController.swift */,
 				BE855C1423E641C300AED4D0 /* Assets.xcassets */,
 				BE855C1623E641C300AED4D0 /* LaunchScreen.storyboard */,
 				BE855C1923E641C300AED4D0 /* Info.plist */,
@@ -422,6 +425,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEB656EA23EF58E200E8DE36 /* DoorViewController.swift in Sources */,
 				BE6E2A7623E7C836004F871B /* UserInfo.swift in Sources */,
 				BE855C1023E641C200AED4D0 /* ViewController.swift in Sources */,
 				BEF9035423EA5EF8000E9E23 /* IDViewController.swift in Sources */,
