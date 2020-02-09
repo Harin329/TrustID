@@ -22,6 +22,7 @@ class IDViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.setNavigationBarHidden(true, animated: true)
         peripheralManager = CBPeripheralManager(delegate: self, queue: nil, options: [CBPeripheralManagerOptionShowPowerAlertKey: true])
     }
     
@@ -244,8 +245,8 @@ extension IDViewController: CBPeripheralManagerDelegate {
     func peripheralManager(_ peripheral: CBPeripheralManager, central: CBCentral, didSubscribeTo characteristic: CBCharacteristic) {
         os_log("Central subscribed to characteristic")
         
-        let tid = "t946263"
-        let token = "token123"
+        let tid = "t947107"
+        let token = "token1"
         
         let dict =
         [

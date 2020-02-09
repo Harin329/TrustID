@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qVE-GV-J1p">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uSV-Po-Kky">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -169,39 +169,59 @@
             </objects>
             <point key="canvasLocation" x="-2312" y="138"/>
         </scene>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="X0m-6m-JVF">
+            <objects>
+                <navigationController id="uSV-Po-Kky" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="soy-xD-qij">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="qVE-GV-J1p" kind="relationship" relationship="rootViewController" id="J5l-k2-1lk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZXS-dd-Qh6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-726" y="138"/>
+        </scene>
+        <!--Login View Controller-->
         <scene sceneID="pdG-Mi-e6i">
             <objects>
-                <viewController id="qVE-GV-J1p" sceneMemberID="viewController">
+                <viewController id="qVE-GV-J1p" customClass="LoginViewController" customModule="TrustID" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4wS-PZ-vNS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSc-P8-FG1">
-                                <rect key="frame" x="100" y="144" width="214" height="30"/>
-                                <state key="normal" title="Sign Up"/>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kUc-i8-AU3" customClass="GIDSignInButton">
+                                <rect key="frame" x="107" y="188" width="200" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="9PV-6a-QjO"/>
+                                    <constraint firstAttribute="height" constant="100" id="xlE-FG-Ifx"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="ZSc-P8-FG1" firstAttribute="leading" secondItem="CSo-gB-8mh" secondAttribute="leading" constant="100" id="STF-gz-oQd"/>
-                            <constraint firstItem="ZSc-P8-FG1" firstAttribute="top" secondItem="CSo-gB-8mh" secondAttribute="top" constant="100" id="alJ-T6-v20"/>
-                            <constraint firstItem="CSo-gB-8mh" firstAttribute="trailing" secondItem="ZSc-P8-FG1" secondAttribute="trailing" constant="100" id="bQs-kf-zJk"/>
+                            <constraint firstItem="kUc-i8-AU3" firstAttribute="top" secondItem="CSo-gB-8mh" secondAttribute="top" constant="100" id="bFP-js-xah"/>
+                            <constraint firstItem="kUc-i8-AU3" firstAttribute="centerX" secondItem="4wS-PZ-vNS" secondAttribute="centerX" id="vgs-cW-JlI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CSo-gB-8mh"/>
                     </view>
+                    <navigationItem key="navigationItem" id="xYl-Ji-Qzs"/>
                     <connections>
-                        <segue destination="aNC-nG-THf" kind="show" id="gAT-3h-UcH"/>
+                        <segue destination="aNC-nG-THf" kind="show" identifier="LoginSegue" id="gAT-3h-UcH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rw0-P3-CCO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="178.2608695652174" y="137.94642857142856"/>
+            <point key="canvasLocation" x="170" y="138"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="FQY-xe-UyJ">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="aNC-nG-THf" customClass="IDViewController" customModule="TrustID" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IDViewController" modalPresentationStyle="fullScreen" id="aNC-nG-THf" customClass="IDViewController" customModule="TrustID" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gv2-KT-uhu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -320,6 +340,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gAT-3h-UcH"/>
+        <segue reference="bG5-8U-JOg"/>
     </inferredMetricsTieBreakers>
 </document>
