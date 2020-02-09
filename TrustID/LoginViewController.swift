@@ -18,27 +18,6 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        GIDSignIn.sharedInstance()?.presentingViewController = self
-        Auth.auth().addStateDidChangeListener { (auth, user) in
-          if Auth.auth().currentUser != nil {
-            self.performSegue(withIdentifier: "LoginSegue", sender: nil)
-          }
-        }
-        guard let signIn = GIDSignIn.sharedInstance() else { return }
-        if (signIn.hasPreviousSignIn()) {
-            signIn.restorePreviousSignIn()
-            if Auth.auth().currentUser != nil {
-                print("already in")
-                performSegue(withIdentifier: "LoginSegue", sender: nil)
-            } else {
-                print("no user")
-            }
-        } else {
-            print("signing in...")
-            GIDSignIn.sharedInstance().signIn()
-            //print("Auth Status: " + (Auth.auth().currentUser?.email)!)
-            //No previous signin
-        }
     }
     
 

@@ -43,10 +43,6 @@ class IDViewController: UIViewController  {
         session!.begin()
     }
     
-    @IBAction func Gate(_ sender: Any) {
-        self.performSegue(withIdentifier: "GateOpen", sender: nil)
-    }
-    
     @IBAction func Logout(_ sender: Any) {
         let firebaseAuth = Auth.auth()
         do {

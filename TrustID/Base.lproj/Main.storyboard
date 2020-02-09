@@ -201,11 +201,21 @@
                                     <constraint firstAttribute="height" constant="100" id="xlE-FG-Ifx"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w74-pT-Vih">
+                                <rect key="frame" x="100" y="732" width="214" height="30"/>
+                                <state key="normal" title="Skip"/>
+                                <connections>
+                                    <segue destination="aNC-nG-THf" kind="show" id="mLa-Md-VtX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="CSo-gB-8mh" firstAttribute="trailing" secondItem="w74-pT-Vih" secondAttribute="trailing" constant="100" id="Gmn-Ij-9TZ"/>
                             <constraint firstItem="kUc-i8-AU3" firstAttribute="top" secondItem="CSo-gB-8mh" secondAttribute="top" constant="100" id="bFP-js-xah"/>
+                            <constraint firstItem="CSo-gB-8mh" firstAttribute="bottom" secondItem="w74-pT-Vih" secondAttribute="bottom" constant="100" id="gDe-tk-oyr"/>
                             <constraint firstItem="kUc-i8-AU3" firstAttribute="centerX" secondItem="4wS-PZ-vNS" secondAttribute="centerX" id="vgs-cW-JlI"/>
+                            <constraint firstItem="w74-pT-Vih" firstAttribute="leading" secondItem="CSo-gB-8mh" secondAttribute="leading" constant="100" id="wTu-4X-IjK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CSo-gB-8mh"/>
                     </view>
@@ -216,7 +226,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rw0-P3-CCO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="170" y="138"/>
+            <point key="canvasLocation" x="169.56521739130437" y="137.94642857142856"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="FQY-xe-UyJ">
@@ -251,7 +261,6 @@
                                 <rect key="frame" x="80" y="274" width="254" height="30"/>
                                 <state key="normal" title="Receive Bluetooth"/>
                                 <connections>
-                                    <action selector="Gate:" destination="aNC-nG-THf" eventType="touchUpInside" id="DJZ-d4-bj9"/>
                                     <segue destination="3YB-wA-bDY" kind="show" identifier="GateOpen" id="XMV-yY-bVz"/>
                                 </connections>
                             </button>
@@ -310,9 +319,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gmf-4s-X7v">
-                                <rect key="frame" x="100" y="59" width="214" height="30"/>
-                                <state key="normal" title="Back"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gmf-4s-X7v">
+                                <rect key="frame" x="100" y="59" width="214" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="yGf-vq-F82"/>
+                                </constraints>
+                                <state key="normal" image="Telus"/>
                                 <connections>
                                     <segue destination="aNC-nG-THf" kind="show" id="bG5-8U-JOg"/>
                                 </connections>
@@ -350,8 +362,10 @@
             <point key="canvasLocation" x="1951" y="138"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Telus" width="500" height="500"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="XMV-yY-bVz"/>
         <segue reference="bG5-8U-JOg"/>
     </inferredMetricsTieBreakers>
 </document>

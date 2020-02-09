@@ -357,7 +357,9 @@ extension DoorViewController: CBPeripheralDelegate {
                                 }
                             } else {
                                 self.LockStatus.text = "Denied"
+                                self.view.backgroundColor = UIColor.orange
                                 Timer.scheduledTimer(withTimeInterval: 10, repeats: false) { (_) in
+                                    self.view.backgroundColor = UIColor.red
                                     self.LockStatus.text = "Locked"
                                     self.retrievePeripheral()
                                 }
