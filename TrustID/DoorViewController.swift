@@ -351,15 +351,15 @@ extension DoorViewController: CBPeripheralDelegate {
                                 self.view.backgroundColor = UIColor.green
                                 self.LockStatus.text = "Unlocked"
                                 Timer.scheduledTimer(withTimeInterval: 10, repeats: false) { (_) in
-                                    self.view.backgroundColor = UIColor.red
+                                    self.view.backgroundColor = UIColor.white
                                     self.LockStatus.text = "Locked"
                                     self.retrievePeripheral()
                                 }
                             } else {
                                 self.LockStatus.text = "Denied"
-                                self.view.backgroundColor = UIColor.orange
+                                self.view.backgroundColor = UIColor.red
                                 Timer.scheduledTimer(withTimeInterval: 10, repeats: false) { (_) in
-                                    self.view.backgroundColor = UIColor.red
+                                    self.view.backgroundColor = UIColor.white
                                     self.LockStatus.text = "Locked"
                                     self.retrievePeripheral()
                                 }

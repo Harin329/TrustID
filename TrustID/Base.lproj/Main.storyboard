@@ -336,7 +336,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="0J2-Te-Y9M" firstAttribute="bottom" secondItem="Wfp-te-gj3" secondAttribute="bottom" constant="300" id="2xB-sy-frF"/>
                             <constraint firstItem="Gmf-4s-X7v" firstAttribute="leading" secondItem="0J2-Te-Y9M" secondAttribute="leading" constant="100" id="3wp-F0-scS"/>
