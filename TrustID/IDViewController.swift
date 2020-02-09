@@ -11,8 +11,10 @@ import CoreNFC
 import CoreBluetooth
 import os
 import LocalAuthentication
+import GoogleSignIn
+import FirebaseAuth
 
-class IDViewController: UIViewController {
+class IDViewController: UIViewController  {
     
     var peripheralManager: CBPeripheralManager!
     var connectedCentral: CBCentral?
@@ -39,6 +41,21 @@ class IDViewController: UIViewController {
         session!.alertMessage = "Hold your device near a tag to scan it."
         // 3
         session!.begin()
+    }
+    
+    @IBAction func Gate(_ sender: Any) {
+        self.performSegue(withIdentifier: "GateOpen", sender: nil)
+    }
+    
+    @IBAction func Logout(_ sender: Any) {
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+            GIDSignIn.sharedInstance()?.signOut()
+            print("Logged Out")
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
     }
     
     //Peripheral
@@ -245,31 +262,29 @@ extension IDViewController: CBPeripheralManagerDelegate {
     func peripheralManager(_ peripheral: CBPeripheralManager, central: CBCentral, didSubscribeTo characteristic: CBCharacteristic) {
         os_log("Central subscribed to characteristic")
         
-        let tid = "t947107"
+        //Not using hardcoded
+        /*let tid = "t947107"
         let token = "token1"
+         
+         let dict =
+         [
+         "tid": tid,
+         "token": token
+         ]*/
+        //let jsonData = try JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted)
         
-        let dict =
-        [
-            "tid": tid,
-            "token": token
-        ]
-        do {
-            let jsonData = try JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted)
-            
-            // Get the data
-            dataToSend = jsonData
-            
-            // Reset the index
-            sendDataIndex = 0
-            
-            // save central
-            connectedCentral = central
-            
-            // Start sending
-            sendData()
-        } catch {
-            print(error.localizedDescription)
-        }
+        // Get the data
+        dataToSend = dataPacket
+        
+        // Reset the index
+        sendDataIndex = 0
+        
+        // save central
+        connectedCentral = central
+        
+        // Start sending
+        sendData()
+        
     }
     
     /*

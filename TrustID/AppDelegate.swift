@@ -52,13 +52,92 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
       guard let authentication = user.authentication else { return }
       let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
                                                         accessToken: authentication.accessToken)
-      Auth.auth().signIn(with: credential) { (authResult, error) in
-        if let error = error {
-          // ...
-          return
+        
+        if Auth.auth().currentUser != nil {
+            do {
+                print("running http")
+                let newDict =
+                    [
+                        "email": Auth.auth().currentUser?.email!
+                    ]
+                let jsonData = try JSONSerialization.data(withJSONObject: newDict)
+                
+                print(String(decoding: jsonData, as: UTF8.self))
+                
+                //API Call
+                let url = URL(string: "https://thacks-api.herokuapp.com/config")!
+                
+                var request = URLRequest(url: url)
+                request.httpMethod = "POST"
+                request.httpBody = jsonData
+                request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+                
+                URLSession.shared.getAllTasks { (openTasks: [URLSessionTask]) in
+                    NSLog("open tasks: \(openTasks)")
+                }
+                
+                let task = URLSession.shared.dataTask(with: request, completionHandler: { (responseData: Data?, response: URLResponse?, error: Error?) in
+                    NSLog("\(response)")
+                    DispatchQueue.main.async {
+                        print(String(decoding: responseData!, as: UTF8.self))
+                        dataPacket = responseData!
+                    }
+                })
+                task.resume()
+                
+                
+                
+            } catch {
+                print(error.localizedDescription)
+            }
+        } else {
+            Auth.auth().signIn(with: credential) { (authResult, error) in
+                if let error = error {
+                  // ...
+                  return
+                }
+                
+                do {
+                    print("running http")
+                    let newDict =
+                        [
+                            "email": Auth.auth().currentUser?.email!
+                        ]
+                    let jsonData = try JSONSerialization.data(withJSONObject: newDict)
+                    
+                    print(String(decoding: jsonData, as: UTF8.self))
+                    
+                    //API Call
+                    let url = URL(string: "https://thacks-api.herokuapp.com/config")!
+                    
+                    var request = URLRequest(url: url)
+                    request.httpMethod = "POST"
+                    request.httpBody = jsonData
+                    request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+                    
+                    URLSession.shared.getAllTasks { (openTasks: [URLSessionTask]) in
+                        NSLog("open tasks: \(openTasks)")
+                    }
+                    
+                    let task = URLSession.shared.dataTask(with: request, completionHandler: { (responseData: Data?, response: URLResponse?, error: Error?) in
+                        NSLog("\(response)")
+                        DispatchQueue.main.async {
+                            print(String(decoding: responseData!, as: UTF8.self))
+                            dataPacket = responseData!
+                        }
+                    })
+                    task.resume()
+                    
+                    
+                    
+                } catch {
+                    print(error.localizedDescription)
+                }
+            
+              }
         }
         
-      }
+      
     }
 
     

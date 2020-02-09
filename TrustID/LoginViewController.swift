@@ -11,11 +11,19 @@ import Firebase
 import GoogleSignIn
 import FirebaseAuth
 
+//This is not safe but because of time yolo
+public var dataPacket = Data()
+
 class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         GIDSignIn.sharedInstance()?.presentingViewController = self
+        Auth.auth().addStateDidChangeListener { (auth, user) in
+          if Auth.auth().currentUser != nil {
+            self.performSegue(withIdentifier: "LoginSegue", sender: nil)
+          }
+        }
         guard let signIn = GIDSignIn.sharedInstance() else { return }
         if (signIn.hasPreviousSignIn()) {
             signIn.restorePreviousSignIn()
@@ -23,24 +31,13 @@ class LoginViewController: UIViewController {
                 print("already in")
                 performSegue(withIdentifier: "LoginSegue", sender: nil)
             } else {
-                GIDSignIn.sharedInstance().signIn()
-                if Auth.auth().currentUser != nil {
-                    print("in")
-                    performSegue(withIdentifier: "LoginSegue", sender: nil)
-                } else {
-                    // No user is signed in.
-                    // ...
-                }
+                print("no user")
             }
         } else {
+            print("signing in...")
             GIDSignIn.sharedInstance().signIn()
-            if Auth.auth().currentUser != nil {
-                print("in")
-                performSegue(withIdentifier: "LoginSegue", sender: nil)
-            } else {
-                // No user is signed in.
-                // ...
-            }
+            //print("Auth Status: " + (Auth.auth().currentUser?.email)!)
+            //No previous signin
         }
     }
     

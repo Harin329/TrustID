@@ -251,14 +251,24 @@
                                 <rect key="frame" x="80" y="274" width="254" height="30"/>
                                 <state key="normal" title="Receive Bluetooth"/>
                                 <connections>
-                                    <segue destination="3YB-wA-bDY" kind="show" id="zBx-9e-0XL"/>
+                                    <action selector="Gate:" destination="aNC-nG-THf" eventType="touchUpInside" id="DJZ-d4-bj9"/>
+                                    <segue destination="3YB-wA-bDY" kind="show" identifier="GateOpen" id="XMV-yY-bVz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DaS-NT-6YH">
+                                <rect key="frame" x="114" y="567" width="186" height="30"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="Logout:" destination="aNC-nG-THf" eventType="touchUpInside" id="Gye-OS-h8O"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Z2J-0N-sjg" firstAttribute="trailing" secondItem="lCg-eb-fEM" secondAttribute="trailing" constant="80" id="18p-UJ-IeQ"/>
+                            <constraint firstItem="Z2J-0N-sjg" firstAttribute="trailing" secondItem="DaS-NT-6YH" secondAttribute="trailing" constant="114" id="1Tk-OK-xJ1"/>
                             <constraint firstItem="Z2J-0N-sjg" firstAttribute="trailing" secondItem="gfg-0G-k7H" secondAttribute="trailing" constant="80" id="6Nf-Ux-lJO"/>
+                            <constraint firstItem="DaS-NT-6YH" firstAttribute="leading" secondItem="Z2J-0N-sjg" secondAttribute="leading" constant="114" id="8J5-R8-Fy7"/>
                             <constraint firstItem="Z2J-0N-sjg" firstAttribute="trailing" secondItem="kaP-7z-nPe" secondAttribute="trailing" constant="130" id="AZ8-ZH-1Ep"/>
                             <constraint firstItem="gfg-0G-k7H" firstAttribute="leading" secondItem="Z2J-0N-sjg" secondAttribute="leading" constant="80" id="C0W-np-HP1"/>
                             <constraint firstItem="lCg-eb-fEM" firstAttribute="top" secondItem="kaP-7z-nPe" secondAttribute="bottom" constant="50" id="Kio-od-yk8"/>
@@ -270,6 +280,7 @@
                             <constraint firstItem="pUI-79-BGh" firstAttribute="leading" secondItem="Z2J-0N-sjg" secondAttribute="leading" constant="80" id="liR-so-a0f"/>
                             <constraint firstItem="kaP-7z-nPe" firstAttribute="leading" secondItem="Z2J-0N-sjg" secondAttribute="leading" constant="130" id="nCY-CW-NQy"/>
                             <constraint firstItem="Z2J-0N-sjg" firstAttribute="trailing" secondItem="pUI-79-BGh" secondAttribute="trailing" constant="80" id="wgw-H5-f3q"/>
+                            <constraint firstItem="DaS-NT-6YH" firstAttribute="top" secondItem="gfg-0G-k7H" secondAttribute="bottom" constant="263" id="zrV-Dt-nTH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Z2J-0N-sjg"/>
                         <variation key="default">
@@ -340,6 +351,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="XMV-yY-bVz"/>
         <segue reference="bG5-8U-JOg"/>
     </inferredMetricsTieBreakers>
 </document>
