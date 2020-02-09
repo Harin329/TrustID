@@ -18,6 +18,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.setNavigationBarHidden(true, animated: true)
         GIDSignIn.sharedInstance()?.presentingViewController = self
         Auth.auth().addStateDidChangeListener { (auth, user) in
           if Auth.auth().currentUser != nil {
