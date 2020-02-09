@@ -13,6 +13,7 @@ import os
 
 class DoorViewController: UIViewController {
     @IBOutlet weak var LockStatus: UILabel!
+    @IBOutlet weak var DoorID: UILabel!
     
     var centralManager: CBCentralManager!
     var discoveredPeripheral: CBPeripheral?
@@ -25,6 +26,7 @@ class DoorViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        DoorID.text = doorID
         centralManager = CBCentralManager(delegate: self, queue: nil, options: [CBCentralManagerOptionShowPowerAlertKey: true])
         retrievePeripheral()
     }
@@ -162,7 +164,7 @@ extension DoorViewController: CBCentralManagerDelegate {
         
         // Reject if the signal strength is too low to attempt data transfer.
         // Change the minimum RSSI value depending on your app’s use case.
-        guard RSSI.intValue >= -30
+        guard RSSI.intValue >= -50
             else {
                 os_log("Discovered perhiperal not in expected range, at %d", RSSI.intValue)
                 return
@@ -324,7 +326,9 @@ extension DoorViewController: CBPeripheralDelegate {
                     "token": token,
                     "doorId": doorID
                 ]
-                let jsonData = try JSONSerialization.data(withJSONObject: newDict, options: .prettyPrinted)
+                let jsonData = try JSONSerialization.data(withJSONObject: newDict)
+                
+                print(String(decoding: jsonData, as: UTF8.self))
 
                 //API Call
                 let url = URL(string: "https://thacks-api.herokuapp.com/employees")!
@@ -333,29 +337,34 @@ extension DoorViewController: CBPeripheralDelegate {
                     var request = URLRequest(url: url)
                     request.httpMethod = "POST"
                     request.httpBody = jsonData
+                    request.addValue("application/json", forHTTPHeaderField: "Content-Type")
 
                     URLSession.shared.getAllTasks { (openTasks: [URLSessionTask]) in
                         NSLog("open tasks: \(openTasks)")
                     }
 
                     let task = URLSession.shared.dataTask(with: request, completionHandler: { (responseData: Data?, response: URLResponse?, error: Error?) in
-                        NSLog("\(responseData)")
                         NSLog("\(response)")
+                        DispatchQueue.main.async {
+                            if (String(decoding: responseData!, as: UTF8.self) == "true") {
+                                self.view.backgroundColor = UIColor.green
+                                self.LockStatus.text = "Unlocked"
+                                Timer.scheduledTimer(withTimeInterval: 10, repeats: false) { (_) in
+                                    self.view.backgroundColor = UIColor.red
+                                    self.LockStatus.text = "Locked"
+                                    self.retrievePeripheral()
+                                }
+                            } else {
+                                self.LockStatus.text = "Denied"
+                                Timer.scheduledTimer(withTimeInterval: 10, repeats: false) { (_) in
+                                    self.LockStatus.text = "Locked"
+                                    self.retrievePeripheral()
+                                }
+                            }
+                        }
                     })
                     task.resume()
                 }
-                
-            
-                
-                /*if (tid == "t947107") {
-                    view.backgroundColor = UIColor.green
-                    LockStatus.text = "Unlocked"
-                    Timer.scheduledTimer(withTimeInterval: 10, repeats: false) { (_) in
-                        self.view.backgroundColor = UIColor.red
-                        self.LockStatus.text = "Locked"
-                        self.retrievePeripheral()
-                    }
-                }*/
                 
                 // Write test data
                 writeData()

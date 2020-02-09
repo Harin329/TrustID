@@ -244,8 +244,8 @@ extension IDViewController: CBPeripheralManagerDelegate {
     func peripheralManager(_ peripheral: CBPeripheralManager, central: CBCentral, didSubscribeTo characteristic: CBCharacteristic) {
         os_log("Central subscribed to characteristic")
         
-        let tid = "t94710"
-        let token = "token1"
+        let tid = "t946263"
+        let token = "token123"
         
         let dict =
         [

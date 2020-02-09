@@ -9,6 +9,8 @@ target 'TrustID' do
 pod 'Firebase/Firestore'
 pod 'FirebaseUI/Storage'
 pod 'Firebase/Database'
+pod 'Firebase/Auth'
+pod 'GoogleSignIn'
 
 
   target 'TrustIDTests' do

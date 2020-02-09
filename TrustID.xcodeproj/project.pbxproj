@@ -10,6 +10,7 @@
 		31BF30C7611DE19B03B40E03 /* Pods_TrustID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6CD560265C0D5C97BEAD95B /* Pods_TrustID.framework */; };
 		4083E4B4713C4A180E1E30B0 /* Pods_TrustIDTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC2301C8FA3503E08B8BE50 /* Pods_TrustIDTests.framework */; };
 		B90F76EECC886785515AFA0B /* Pods_TrustID_TrustIDUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F06DD128FF04FFE0D69331 /* Pods_TrustID_TrustIDUITests.framework */; };
+		BE24FD1423EF9E6700D08031 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE24FD1323EF9E6700D08031 /* LoginViewController.swift */; };
 		BE6E2A7623E7C836004F871B /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6E2A7523E7C836004F871B /* UserInfo.swift */; };
 		BE855C0C23E641C200AED4D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE855C0B23E641C200AED4D0 /* AppDelegate.swift */; };
 		BE855C0E23E641C200AED4D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE855C0D23E641C200AED4D0 /* SceneDelegate.swift */; };
@@ -21,8 +22,8 @@
 		BE855C2E23E641C300AED4D0 /* TrustIDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE855C2D23E641C300AED4D0 /* TrustIDUITests.swift */; };
 		BEB656E823EE39FE00E8DE36 /* InfoSent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB656E723EE39FE00E8DE36 /* InfoSent.swift */; };
 		BEB656EA23EF58E200E8DE36 /* DoorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB656E923EF58E200E8DE36 /* DoorViewController.swift */; };
+		BEB656F023EF9BF500E8DE36 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BEB656EF23EF9BF500E8DE36 /* GoogleService-Info.plist */; };
 		BEF9035423EA5EF8000E9E23 /* IDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF9035323EA5EF8000E9E23 /* IDViewController.swift */; };
-		BEF9035723EA6145000E9E23 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BEF9035623EA6145000E9E23 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		9EC2301C8FA3503E08B8BE50 /* Pods_TrustIDTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrustIDTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A35C3F72AC8E317AEE569822 /* Pods-TrustIDTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrustIDTests.debug.xcconfig"; path = "Target Support Files/Pods-TrustIDTests/Pods-TrustIDTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B6CD560265C0D5C97BEAD95B /* Pods_TrustID.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrustID.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE24FD1323EF9E6700D08031 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BE6E2A7523E7C836004F871B /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		BE855C0823E641C200AED4D0 /* TrustID.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrustID.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE855C0B23E641C200AED4D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,9 +71,9 @@
 		BE855C2F23E641C300AED4D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEB656E723EE39FE00E8DE36 /* InfoSent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoSent.swift; sourceTree = "<group>"; };
 		BEB656E923EF58E200E8DE36 /* DoorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorViewController.swift; sourceTree = "<group>"; };
+		BEB656EF23EF9BF500E8DE36 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BEF9035323EA5EF8000E9E23 /* IDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDViewController.swift; sourceTree = "<group>"; };
 		BEF9035523EA5FE1000E9E23 /* TrustID.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TrustID.entitlements; sourceTree = "<group>"; };
-		BEF9035623EA6145000E9E23 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,13 +154,14 @@
 			children = (
 				BEF9035523EA5FE1000E9E23 /* TrustID.entitlements */,
 				BE855C0B23E641C200AED4D0 /* AppDelegate.swift */,
+				BEB656EF23EF9BF500E8DE36 /* GoogleService-Info.plist */,
 				BE855C0D23E641C200AED4D0 /* SceneDelegate.swift */,
 				BE855C0F23E641C200AED4D0 /* ViewController.swift */,
 				BEF9035323EA5EF8000E9E23 /* IDViewController.swift */,
 				BEB656E723EE39FE00E8DE36 /* InfoSent.swift */,
-				BEF9035623EA6145000E9E23 /* GoogleService-Info.plist */,
 				BE6E2A7523E7C836004F871B /* UserInfo.swift */,
 				BE855C1123E641C200AED4D0 /* Main.storyboard */,
+				BE24FD1323EF9E6700D08031 /* LoginViewController.swift */,
 				BEB656E923EF58E200E8DE36 /* DoorViewController.swift */,
 				BE855C1423E641C300AED4D0 /* Assets.xcassets */,
 				BE855C1623E641C300AED4D0 /* LaunchScreen.storyboard */,
@@ -197,6 +200,7 @@
 				BE855C0523E641C200AED4D0 /* Frameworks */,
 				BE855C0623E641C200AED4D0 /* Resources */,
 				999FC2390C9AAF458B1094A3 /* [CP] Embed Pods Frameworks */,
+				12C1990F521EB829E0968E19 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -235,6 +239,7 @@
 				BE855C2623E641C300AED4D0 /* Frameworks */,
 				BE855C2723E641C300AED4D0 /* Resources */,
 				6FDDAC3970260DA871778A67 /* [CP] Embed Pods Frameworks */,
+				2692728696A7AB48E591FB28 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -295,7 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE855C1823E641C300AED4D0 /* LaunchScreen.storyboard in Resources */,
-				BEF9035723EA6145000E9E23 /* GoogleService-Info.plist in Resources */,
+				BEB656F023EF9BF500E8DE36 /* GoogleService-Info.plist in Resources */,
 				BE855C1523E641C300AED4D0 /* Assets.xcassets in Resources */,
 				BE855C1323E641C200AED4D0 /* Main.storyboard in Resources */,
 			);
@@ -318,6 +323,40 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		12C1990F521EB829E0968E19 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TrustID/Pods-TrustID-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TrustID/Pods-TrustID-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TrustID/Pods-TrustID-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2692728696A7AB48E591FB28 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TrustID-TrustIDUITests/Pods-TrustID-TrustIDUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TrustID-TrustIDUITests/Pods-TrustID-TrustIDUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TrustID-TrustIDUITests/Pods-TrustID-TrustIDUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4B09C64BA669A601FAB428CB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -429,6 +468,7 @@
 				BE6E2A7623E7C836004F871B /* UserInfo.swift in Sources */,
 				BE855C1023E641C200AED4D0 /* ViewController.swift in Sources */,
 				BEF9035423EA5EF8000E9E23 /* IDViewController.swift in Sources */,
+				BE24FD1423EF9E6700D08031 /* LoginViewController.swift in Sources */,
 				BE855C0C23E641C200AED4D0 /* AppDelegate.swift in Sources */,
 				BE855C0E23E641C200AED4D0 /* SceneDelegate.swift in Sources */,
 				BEB656E823EE39FE00E8DE36 /* InfoSent.swift in Sources */,
@@ -613,7 +653,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.telus.TrustID;
+				PRODUCT_BUNDLE_IDENTIFIER = com.telushacks.identity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -633,7 +673,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.telus.TrustID;
+				PRODUCT_BUNDLE_IDENTIFIER = com.telushacks.identity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
