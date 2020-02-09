@@ -14,6 +14,8 @@ import os
 class DoorViewController: UIViewController {
     @IBOutlet weak var LockStatus: UILabel!
     @IBOutlet weak var DoorID: UILabel!
+    @IBOutlet weak var LockImage: UIImageView!
+    @IBOutlet weak var Lock: UIImageView!
     
     var centralManager: CBCentralManager!
     var discoveredPeripheral: CBPeripheral?
@@ -27,6 +29,8 @@ class DoorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(true, animated: true)
+        Lock.image = UIImage(named: "Locked")
+        LockImage.image = UIImage(named: "Closed")
         DoorID.text = doorID
         centralManager = CBCentralManager(delegate: self, queue: nil, options: [CBCentralManagerOptionShowPowerAlertKey: true])
         retrievePeripheral()
@@ -348,19 +352,26 @@ extension DoorViewController: CBPeripheralDelegate {
                         NSLog("\(response)")
                         DispatchQueue.main.async {
                             if (String(decoding: responseData!, as: UTF8.self) == "true") {
-                                self.view.backgroundColor = UIColor.green
+                                //self.view.backgroundColor = UIColor.green
                                 self.LockStatus.text = "Unlocked"
+                                self.Lock.image = UIImage(named: "Unlocked")
+                                self.LockImage.image = UIImage(named: "Open")
                                 Timer.scheduledTimer(withTimeInterval: 10, repeats: false) { (_) in
-                                    self.view.backgroundColor = UIColor.white
+                                    //self.view.backgroundColor = UIColor.white
                                     self.LockStatus.text = "Locked"
+                                    self.Lock.image = UIImage(named: "Locked")
+                                    self.LockImage.image = UIImage(named: "Closed")
                                     self.retrievePeripheral()
                                 }
                             } else {
                                 self.LockStatus.text = "Denied"
-                                self.view.backgroundColor = UIColor.red
+                                //self.view.backgroundColor = UIColor.red
+                                self.Lock.image = UIImage(named: "Locked")
+                                self.LockImage.image = UIImage(named: "Denied")
                                 Timer.scheduledTimer(withTimeInterval: 10, repeats: false) { (_) in
-                                    self.view.backgroundColor = UIColor.white
+                                    //self.view.backgroundColor = UIColor.white
                                     self.LockStatus.text = "Locked"
+                                    self.LockImage.image = UIImage(named: "Closed")
                                     self.retrievePeripheral()
                                 }
                             }
