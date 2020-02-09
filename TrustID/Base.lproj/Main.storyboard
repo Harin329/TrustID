@@ -226,6 +226,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j80-1z-6dr">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaP-7z-nPe">
                                 <rect key="frame" x="130" y="44" width="154" height="30"/>
                                 <state key="normal" title="Back"/>
@@ -241,46 +245,70 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUI-79-BGh">
-                                <rect key="frame" x="80" y="204" width="254" height="30"/>
-                                <state key="normal" title="Send Bluetooth"/>
+                                <rect key="frame" x="80" y="740" width="254" height="32"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Open Door">
+                                    <color key="titleColor" red="0.16862745098039217" green="0.50196078431372548" blue="0.0" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                                 <connections>
                                     <action selector="SendBluetooth:" destination="aNC-nG-THf" eventType="touchUpInside" id="lfM-5o-M8N"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfg-0G-k7H">
-                                <rect key="frame" x="80" y="274" width="254" height="30"/>
-                                <state key="normal" title="Receive Bluetooth"/>
-                                <connections>
-                                    <action selector="Gate:" destination="aNC-nG-THf" eventType="touchUpInside" id="DJZ-d4-bj9"/>
-                                    <segue destination="3YB-wA-bDY" kind="show" identifier="GateOpen" id="XMV-yY-bVz"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DaS-NT-6YH">
-                                <rect key="frame" x="114" y="567" width="186" height="30"/>
-                                <state key="normal" title="Logout"/>
+                                <rect key="frame" x="100" y="74" width="214" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="yeA-Aw-DJO"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="Telus"/>
                                 <connections>
                                     <action selector="Logout:" destination="aNC-nG-THf" eventType="touchUpInside" id="Gye-OS-h8O"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mrr-Nk-Pgo">
+                                <rect key="frame" x="80" y="284" width="254" height="336"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mkC-so-Haj">
+                                <rect key="frame" x="100" y="640" width="214" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T-ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdg-V7-pbE">
+                                <rect key="frame" x="100" y="680" width="214" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="mrr-Nk-Pgo" firstAttribute="top" secondItem="DaS-NT-6YH" secondAttribute="bottom" constant="10" id="0FC-X3-x5z"/>
                             <constraint firstItem="Z2J-0N-sjg" firstAttribute="trailing" secondItem="lCg-eb-fEM" secondAttribute="trailing" constant="80" id="18p-UJ-IeQ"/>
-                            <constraint firstItem="Z2J-0N-sjg" firstAttribute="trailing" secondItem="DaS-NT-6YH" secondAttribute="trailing" constant="114" id="1Tk-OK-xJ1"/>
-                            <constraint firstItem="Z2J-0N-sjg" firstAttribute="trailing" secondItem="gfg-0G-k7H" secondAttribute="trailing" constant="80" id="6Nf-Ux-lJO"/>
-                            <constraint firstItem="DaS-NT-6YH" firstAttribute="leading" secondItem="Z2J-0N-sjg" secondAttribute="leading" constant="114" id="8J5-R8-Fy7"/>
+                            <constraint firstItem="Z2J-0N-sjg" firstAttribute="trailing" secondItem="DaS-NT-6YH" secondAttribute="trailing" constant="100" id="1Tk-OK-xJ1"/>
+                            <constraint firstItem="j80-1z-6dr" firstAttribute="leading" secondItem="Z2J-0N-sjg" secondAttribute="leading" id="3DS-rr-6m3"/>
+                            <constraint firstItem="mrr-Nk-Pgo" firstAttribute="leading" secondItem="Z2J-0N-sjg" secondAttribute="leading" constant="80" id="6Lt-pN-A8D"/>
+                            <constraint firstItem="DaS-NT-6YH" firstAttribute="leading" secondItem="Z2J-0N-sjg" secondAttribute="leading" constant="100" id="8J5-R8-Fy7"/>
                             <constraint firstItem="Z2J-0N-sjg" firstAttribute="trailing" secondItem="kaP-7z-nPe" secondAttribute="trailing" constant="130" id="AZ8-ZH-1Ep"/>
-                            <constraint firstItem="gfg-0G-k7H" firstAttribute="leading" secondItem="Z2J-0N-sjg" secondAttribute="leading" constant="80" id="C0W-np-HP1"/>
+                            <constraint firstItem="DaS-NT-6YH" firstAttribute="top" secondItem="Z2J-0N-sjg" secondAttribute="top" constant="30" id="Dk8-5C-mBe"/>
+                            <constraint firstItem="mkC-so-Haj" firstAttribute="top" secondItem="mrr-Nk-Pgo" secondAttribute="bottom" constant="20" id="E7Z-sH-o79"/>
                             <constraint firstItem="lCg-eb-fEM" firstAttribute="top" secondItem="kaP-7z-nPe" secondAttribute="bottom" constant="50" id="Kio-od-yk8"/>
                             <constraint firstItem="pUI-79-BGh" firstAttribute="top" secondItem="lCg-eb-fEM" secondAttribute="bottom" constant="50" id="MeK-Mq-LZE"/>
-                            <constraint firstItem="pUI-79-BGh" firstAttribute="top" secondItem="Z2J-0N-sjg" secondAttribute="top" constant="160" id="RRf-En-JgW"/>
-                            <constraint firstItem="gfg-0G-k7H" firstAttribute="top" secondItem="pUI-79-BGh" secondAttribute="bottom" constant="40" id="Tej-Qr-JBU"/>
+                            <constraint firstItem="mkC-so-Haj" firstAttribute="leading" secondItem="Z2J-0N-sjg" secondAttribute="leading" constant="100" id="NGQ-Q8-IVo"/>
+                            <constraint firstItem="gdg-V7-pbE" firstAttribute="top" secondItem="mkC-so-Haj" secondAttribute="bottom" constant="20" id="OBx-n5-PfK"/>
+                            <constraint firstItem="Z2J-0N-sjg" firstAttribute="trailing" secondItem="gdg-V7-pbE" secondAttribute="trailing" constant="100" id="Qg4-c1-h37"/>
+                            <constraint firstItem="gdg-V7-pbE" firstAttribute="leading" secondItem="Z2J-0N-sjg" secondAttribute="leading" constant="100" id="UX9-n5-fbO"/>
                             <constraint firstItem="kaP-7z-nPe" firstAttribute="top" secondItem="Z2J-0N-sjg" secondAttribute="top" id="Y1m-Ha-cBf"/>
+                            <constraint firstItem="Z2J-0N-sjg" firstAttribute="bottom" secondItem="pUI-79-BGh" secondAttribute="bottom" constant="90" id="a3l-ox-Wbs"/>
+                            <constraint firstItem="j80-1z-6dr" firstAttribute="top" secondItem="gv2-KT-uhu" secondAttribute="top" id="a8B-XZ-zw5"/>
+                            <constraint firstItem="pUI-79-BGh" firstAttribute="top" secondItem="gdg-V7-pbE" secondAttribute="bottom" constant="40" id="eTw-kg-fTL"/>
                             <constraint firstItem="lCg-eb-fEM" firstAttribute="leading" secondItem="Z2J-0N-sjg" secondAttribute="leading" constant="80" id="haX-rs-vze"/>
                             <constraint firstItem="pUI-79-BGh" firstAttribute="leading" secondItem="Z2J-0N-sjg" secondAttribute="leading" constant="80" id="liR-so-a0f"/>
                             <constraint firstItem="kaP-7z-nPe" firstAttribute="leading" secondItem="Z2J-0N-sjg" secondAttribute="leading" constant="130" id="nCY-CW-NQy"/>
+                            <constraint firstItem="Z2J-0N-sjg" firstAttribute="trailing" secondItem="mrr-Nk-Pgo" secondAttribute="trailing" constant="80" id="pF2-lz-vsq"/>
+                            <constraint firstItem="Z2J-0N-sjg" firstAttribute="trailing" secondItem="mkC-so-Haj" secondAttribute="trailing" constant="100" id="pG0-QF-Fow"/>
+                            <constraint firstAttribute="bottom" secondItem="j80-1z-6dr" secondAttribute="bottom" id="tw8-ID-7a3"/>
                             <constraint firstItem="Z2J-0N-sjg" firstAttribute="trailing" secondItem="pUI-79-BGh" secondAttribute="trailing" constant="80" id="wgw-H5-f3q"/>
-                            <constraint firstItem="DaS-NT-6YH" firstAttribute="top" secondItem="gfg-0G-k7H" secondAttribute="bottom" constant="263" id="zrV-Dt-nTH"/>
+                            <constraint firstItem="j80-1z-6dr" firstAttribute="trailing" secondItem="Z2J-0N-sjg" secondAttribute="trailing" id="zoa-W9-FKC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Z2J-0N-sjg"/>
                         <variation key="default">
@@ -291,6 +319,11 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="LJ0-tC-a4c"/>
+                    <connections>
+                        <outlet property="UserID" destination="gdg-V7-pbE" id="Wqb-dD-V85"/>
+                        <outlet property="UserImage" destination="mrr-Nk-Pgo" id="Zfq-du-wTd"/>
+                        <outlet property="UserName" destination="mkC-so-Haj" id="xgd-mV-4K8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pKd-kw-mP7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -350,8 +383,10 @@
             <point key="canvasLocation" x="1951" y="138"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Telus" width="500" height="500"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="XMV-yY-bVz"/>
         <segue reference="bG5-8U-JOg"/>
     </inferredMetricsTieBreakers>
 </document>

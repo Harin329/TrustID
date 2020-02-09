@@ -13,8 +13,13 @@ import os
 import LocalAuthentication
 import GoogleSignIn
 import FirebaseAuth
+import Firebase
+import FirebaseUI
 
 class IDViewController: UIViewController  {
+    @IBOutlet weak var UserImage: UIImageView!
+    @IBOutlet weak var UserName: UILabel!
+    @IBOutlet weak var UserID: UILabel!
     
     var peripheralManager: CBPeripheralManager!
     var connectedCentral: CBCentral?
@@ -26,6 +31,24 @@ class IDViewController: UIViewController  {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(true, animated: true)
         peripheralManager = CBPeripheralManager(delegate: self, queue: nil, options: [CBPeripheralManagerOptionShowPowerAlertKey: true])
+        Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { (_) in
+            do {
+                let jsonDict = try JSONSerialization.jsonObject(with: dataPacket) as? NSDictionary
+                let tid = jsonDict!["tid"] as! String
+                let name = jsonDict!["name"] as! String
+                print(jsonDict)
+                print(tid)
+                DispatchQueue.main.async {
+                    self.UserID.text = tid
+                    self.UserName.text = name
+                    let storageRef = storage.reference().child("ProfilePicture").child(tid + ".jpeg")
+                    self.UserImage.sd_setImage(with: storageRef)
+                }
+            } catch {
+                
+            }
+        }
+        
     }
     
 
