@@ -10,6 +10,7 @@ import UIKit
 import CoreNFC
 import CoreBluetooth
 import os
+import Firebase
 
 class DoorViewController: UIViewController {
     @IBOutlet weak var LockStatus: UILabel!
@@ -31,7 +32,11 @@ class DoorViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: true)
         Lock.image = UIImage(named: "Locked")
         LockImage.image = UIImage(named: "Closed")
-        DoorID.text = doorID
+        db.collection("thacks-doors").document(doorID).getDocument { (document, error) in
+            if let document = document, document.exists {
+                self.DoorID.text = document.get("description") as? String ?? "The Boot - 09N"
+            }
+        }
         centralManager = CBCentralManager(delegate: self, queue: nil, options: [CBCentralManagerOptionShowPowerAlertKey: true])
         retrievePeripheral()
     }
