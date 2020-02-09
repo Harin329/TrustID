@@ -314,13 +314,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Locked" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wfp-te-gj3">
-                                <rect key="frame" x="100" y="543" width="214" height="35"/>
+                                <rect key="frame" x="100" y="494" width="214" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gmf-4s-X7v">
-                                <rect key="frame" x="100" y="59" width="214" height="200"/>
+                                <rect key="frame" x="100" y="44" width="214" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="yGf-vq-F82"/>
                                 </constraints>
@@ -330,21 +330,21 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HmK-H7-ogY">
-                                <rect key="frame" x="107" y="293" width="200" height="200"/>
+                                <rect key="frame" x="107" y="244" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="0dm-VV-rfo"/>
                                     <constraint firstAttribute="height" constant="200" id="5Re-d8-lX3"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NuW-Oh-d9Z">
-                                <rect key="frame" x="182" y="608" width="50" height="50"/>
+                                <rect key="frame" x="182" y="559" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="5hU-pl-Vlq"/>
                                     <constraint firstAttribute="height" constant="50" id="lhR-j7-6mp"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Door 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixi-Q7-Pkw">
-                                <rect key="frame" x="80" y="688" width="254" height="21"/>
+                                <rect key="frame" x="80" y="639" width="254" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -359,11 +359,11 @@
                             <constraint firstItem="0J2-Te-Y9M" firstAttribute="trailing" secondItem="HmK-H7-ogY" secondAttribute="trailing" constant="107" id="Md5-go-pR3"/>
                             <constraint firstItem="Wfp-te-gj3" firstAttribute="top" secondItem="HmK-H7-ogY" secondAttribute="bottom" constant="50" id="OfD-zX-WXn"/>
                             <constraint firstItem="ixi-Q7-Pkw" firstAttribute="leading" secondItem="0J2-Te-Y9M" secondAttribute="leading" constant="80" id="Tcw-gZ-i7I"/>
-                            <constraint firstItem="HmK-H7-ogY" firstAttribute="top" secondItem="Gmf-4s-X7v" secondAttribute="bottom" constant="34" id="Wuu-F1-2XQ"/>
+                            <constraint firstItem="HmK-H7-ogY" firstAttribute="top" secondItem="Gmf-4s-X7v" secondAttribute="bottom" id="Wuu-F1-2XQ"/>
                             <constraint firstItem="NuW-Oh-d9Z" firstAttribute="top" secondItem="Wfp-te-gj3" secondAttribute="bottom" constant="30" id="aE2-7n-gsN"/>
                             <constraint firstItem="Wfp-te-gj3" firstAttribute="leading" secondItem="0J2-Te-Y9M" secondAttribute="leading" constant="100" id="awH-os-gQd"/>
                             <constraint firstItem="0J2-Te-Y9M" firstAttribute="trailing" secondItem="Gmf-4s-X7v" secondAttribute="trailing" constant="100" id="faT-Yi-pxW"/>
-                            <constraint firstItem="Gmf-4s-X7v" firstAttribute="top" secondItem="0J2-Te-Y9M" secondAttribute="top" constant="15" id="hTm-c3-KC1"/>
+                            <constraint firstItem="Gmf-4s-X7v" firstAttribute="top" secondItem="0J2-Te-Y9M" secondAttribute="top" id="hTm-c3-KC1"/>
                             <constraint firstItem="0J2-Te-Y9M" firstAttribute="trailing" secondItem="ixi-Q7-Pkw" secondAttribute="trailing" constant="80" id="hnx-cw-5N8"/>
                             <constraint firstItem="0J2-Te-Y9M" firstAttribute="trailing" secondItem="Wfp-te-gj3" secondAttribute="trailing" constant="100" id="rXb-de-f30"/>
                         </constraints>
