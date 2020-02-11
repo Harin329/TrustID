@@ -25,7 +25,7 @@ class DoorViewController: UIViewController {
     var connectionIterationsComplete = 0
     let defaultIterations = 5     // change this value based on test usecase
     var data = Data()
-    let doorID = "door1"
+    let doorID = "door2"
 
     override func viewDidLoad() {
         super.viewDidLoad()
